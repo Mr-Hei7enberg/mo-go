@@ -1,6 +1,6 @@
 /* Font import =========================================== */
 @import url(https://fonts.googleapis.com/css?family=Kaushan+Script:400&display=swap&subset=cyrillic);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,400,700&display=swap&subset=cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300i,400,700&display=swap&subset=cyrillic);
 /* subset=cyrillic */
 /* &display=swap */
 
@@ -368,6 +368,7 @@ hr {
 }
 
 .section-devices {
+    margin-bottom: 40px;
     padding-bottom: 0;
     background: url("../img/devices/bg.png");
     background-repeat: no-repeat;
@@ -553,4 +554,82 @@ hr {
     bottom: -80px;
     right: 0;
     z-index: 1;
+}
+
+/* Wedo ====================================================== */
+
+.wedo {
+    display: flex;
+}
+
+.wedo__item {
+    flex: 0 0 50%;
+}
+
+/* Accordion ====================================================== */
+
+.accordion__item {
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.accordion__item.active .accordion__content {
+    display: block;
+}
+
+.accordion__item.active .accordion__header {
+    border-bottom-color: #e5e5e5;
+}
+
+.accordion__item.active .accordion__header::after {
+    transform: translateY(-50%) rotate(-45deg);
+    margin-top: 5px;
+}
+
+.accordion__header {
+    padding: 15px 20px 15px 65px;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.accordion__header::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.accordion__icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.accordion__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.accordion__content {
+    display: none;
+    padding: 20px;
+    font-size: 15px;
+    color: #999;
+    font-style: italic;
+    font-weight: 300;
 }
