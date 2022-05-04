@@ -397,6 +397,7 @@ body {
 /* About ========================================== */
 
 .about {
+    margin-top: 110px;
     display: flex;
     justify-content: space-between;
 }
@@ -444,4 +445,40 @@ body {
     z-index: 2;
     transform: translate3d(0, -50%, 0);
     transition: opacity .2s linear;
+}
+
+/* Statistics ========================================= */
+
+.statistics {
+    background-color: #95e1d3;
+}
+
+.statistics__container {}
+
+.stat {
+    display: flex;
+}
+
+.stat__item {
+    flex: 0 0 20%;
+    padding: 70px 25px;
+    border-left: 1px solid #b5eae0;
+    text-align: center;
+    color: #fff;
+}
+
+.stat__item:last-child {
+    border-right: 1px solid #b5eae0;
+}
+
+.stat__count {
+    margin-bottom: 15px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
 }
