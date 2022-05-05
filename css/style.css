@@ -482,7 +482,6 @@ hr {
 
 .card__name {
     font-size: 14px;
-    font-weight: 700;
     text-transform: uppercase;
     color: #333;
 }
@@ -671,12 +670,16 @@ hr {
 }
 
 .reviews__item {
-    padding-left: 205px;
+    padding-left: 245px;
     position: relative;
 }
 
 .reviews__photo {
     border: 2px solid #95e1d3;
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+
     position: absolute;
     top: 0;
     left: 0;
