@@ -766,3 +766,15 @@ hr {
     color: #fff;
     background-color: #f38181;
 }
+
+/* Logos ================================================== */
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos__item {}
+
+.logos__img {}
