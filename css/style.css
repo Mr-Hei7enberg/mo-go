@@ -367,7 +367,7 @@ hr {
     padding: 80px 0;
 }
 
-.section-devices {
+.section_devices {
     margin-bottom: 40px;
     padding-bottom: 0;
     background: url("../img/devices/bg.png");
@@ -375,6 +375,10 @@ hr {
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
+}
+
+.section_grey {
+    background-color: #f8f8f8;
 }
 
 .section__container {}
@@ -414,43 +418,47 @@ hr {
     color: #999;
 }
 
-/* About ========================================== */
+/* Card ========================================== */
 
-.about {
+.card {
     margin-top: 110px;
     display: flex;
     justify-content: space-between;
 }
 
-.about__item {
+.card__item {
     flex: 0 0 30%;
+
+}
+
+.card__inner {
     background-color: #95e1d3;
     position: relative;
 }
 
-.about__item:hover .about__img {
+.card__inner:hover .card__img {
     transform: translate3d(-10px, -10px, 0);
 }
 
-.about__item:hover .about__img img {
+.card__inner:hover .card__img img {
     opacity: .1;
 }
 
-.about__item:hover .about__text {
+.card__inner:hover .card__text {
     opacity: 1;
 }
 
-.about__img {
+.card__img {
     background: linear-gradient(to bottom, #f38181, #fce38a);
     transition: transform .2s linear;
 }
 
-.about__img img {
+.card__img img {
     display: block;
     transition: opacity .1s linear;
 }
 
-.about__text {
+.card__text {
     width: 100%;
     color: #fff;
     text-transform: uppercase;
@@ -465,6 +473,25 @@ hr {
     z-index: 2;
     transform: translate3d(0, -50%, 0);
     transition: opacity .2s linear;
+}
+
+.card__info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card__name {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.card__prof {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    color: #333;
 }
 
 /* Statistics ========================================= */
@@ -566,7 +593,7 @@ hr {
     flex: 0 0 50%;
 }
 
-/* Accordion ====================================================== */
+/* Accordion ================================================= */
 
 .accordion__item {
     margin-bottom: 10px;
@@ -632,4 +659,110 @@ hr {
     color: #999;
     font-style: italic;
     font-weight: 300;
+}
+
+/* Reviews ================================================= */
+
+.section__container {}
+
+.reviews {
+    padding: 0 110px;
+    position: relative;
+}
+
+.reviews__item {
+    padding-left: 205px;
+    position: relative;
+}
+
+.reviews__photo {
+    border: 2px solid #95e1d3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reviews__text {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    color: #999;
+}
+
+.reviews__author {
+    font-family: "Kaushan Script", "cursive";
+    font-size: 24px;
+    color: #333;
+}
+
+.reviews__author::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: #f38181;
+}
+
+.reviews__btn {
+    font-size: 0;
+    color: transparent;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.reviews__btn::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+}
+
+.reviews__btn_prev {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.reviews__btn_next {
+    right: 0;
+    transform: rotate(135deg);
+}
+
+/* Social ============================================= */
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social__item {
+    width: 55px;
+    height: 55px;
+    padding: 12px 10px;
+    background-color: #fce38a;
+    border-right: 1px solid #f38181;
+    font-size: 30px;
+    text-decoration: none;
+    color: #f38181;
+    line-height: 1;
+    transition: background .1s linear, color .1s linear;
+}
+
+
+.social__item:last-child {
+    border-right: 0;
+}
+
+.social__item:hover {
+    color: #fff;
+    background-color: #f38181;
 }
