@@ -54,6 +54,18 @@ hr {
     z-index: 50;
 }
 
+.header.active {
+    background-color: #95e1d3;
+}
+
+.header.active .header__body {
+    height: 50px;
+}
+
+.header.active .header__link::after {
+    top: 20px;
+}
+
 .header::before {
     content: "";
     position: absolute;
@@ -105,7 +117,7 @@ hr {
 
 .header__list li {
     list-style: none;
-    margin: 0 0 0 60px;
+    margin: 0 0 0 50px;
 }
 
 .header__link {
@@ -245,7 +257,7 @@ hr {
     }
 
     .header__link {
-        font-size: 24px;
+        font-size: 18px;
     }
 
 
@@ -1409,7 +1421,7 @@ hr {
     }
 
     .section {
-        padding: 40px 0;
+        padding: 50px 0;
     }
 
     .section_devices {
