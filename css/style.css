@@ -561,13 +561,18 @@ hr {
 
 .services {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .services__item {
     flex: 0 0 33.333%;
-    padding-left: 85px;
-    padding-right: 35px;
+    padding: 0 35px 40px 85px;
+    margin-bottom: 40px;
     position: relative;
+}
+
+.services__item_border {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .services__icon {
@@ -601,6 +606,8 @@ hr {
 
 .devices__item {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .devices__item_iphone {
@@ -614,10 +621,19 @@ hr {
 
 .wedo {
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo__item {
     flex: 0 0 50%;
+    padding: 0 15px;
+}
+
+.wedo__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Accordion ================================================= */
@@ -1307,6 +1323,14 @@ hr {
         border-right: 0;
     }
 
+    .services__item {
+        flex: 0 0 50%;
+        padding-bottom: 0;
+    }
+
+    .services__item_border {
+        border-bottom: 0;
+    }
 
 
 
@@ -1317,6 +1341,10 @@ hr {
 @media (max-width: 770px) {
     .section {
         padding: 40px 0;
+    }
+
+    .section_devices {
+        padding-bottom: 0;
     }
 
     .card {
@@ -1342,6 +1370,28 @@ hr {
         width: 50%;
     }
 
+    .services {
+        justify-content: center;
+    }
+
+    .services__item {
+        flex: 0 0 100%;
+        max-width: 400px;
+        padding-left: 55px;
+        padding-right: 0;
+    }
+
+    .services__icon {
+        left: 0;
+    }
+
+    .wedo__img {
+        display: none;
+    }
+
+    .wedo__item {
+        flex: 0 0 100%;
+    }
 
 
 
@@ -1387,7 +1437,15 @@ hr {
         font-size: 52px;
     }
 
+    .devices {
+        max-width: 320px;
+    }
 
+    .devices__item_iphone {
+        width: 180px;
+        bottom: -50px;
+        right: -80px;
+    }
 
 
 }
