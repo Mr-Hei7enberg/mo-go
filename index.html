@@ -8,13 +8,13 @@
     <meta name="description" content="Page description" />
 
     <!-- Favicons -->
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link rel="manifest" href="img/favicons/site.webmanifest">
     <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff"> -->
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Lineicons -->
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
@@ -25,7 +25,9 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- JS -->
     <script src="js/app.js" defer></script>
@@ -272,13 +274,13 @@
                             <img class="wedo__img" src="img/wedo/01.png" alt="photo">
                         </div>
                         <div class="wedo__item">
-                            <div class="accordion">
-                                <div class="accordion__item">
+                            <div class="accordion" id="accordion">
+                                <div class="accordion__item active" data-collapse="#wedo_1">
                                     <div class="accordion__header">
                                         <img src="img/wedo/icons/01.png" alt="accordion icon" class="accordion__icon">
                                         <div class="accordion__title">Photography</div>
                                     </div>
-                                    <div class="accordion__content">
+                                    <div class="accordion__content" id="wedo_1">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna
                                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -291,12 +293,12 @@
                                     </div>
                                 </div>
 
-                                <div class="accordion__item active">
+                                <div class="accordion__item" data-collapse="#wedo_2">
                                     <div class="accordion__header">
                                         <img src="img/wedo/icons/02.png" alt="creativity icon" class="accordion__icon">
                                         <div class="accordion__title">Creativity</div>
                                     </div>
-                                    <div class="accordion__content">
+                                    <div class="accordion__content" id="wedo_2">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna
                                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -309,12 +311,12 @@
                                     </div>
                                 </div>
 
-                                <div class="accordion__item">
+                                <div class="accordion__item" data-collapse="#wedo_3">
                                     <div class="accordion__header">
                                         <img src="img/wedo/icons/03.png" alt="web design icon" class="accordion__icon">
                                         <div class="accordion__title">Web design</div>
                                     </div>
-                                    <div class="accordion__content">
+                                    <div class="accordion__content" id="wedo_3">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna
                                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -336,16 +338,31 @@
                 <div class="section__container">
 
                     <div class="reviews">
-                        <a class="reviews__btn reviews__btn_prev" href="#">Prev</a>
-                        <a class="reviews__btn reviews__btn_next" href="#">Next</a>
 
-                        <div class="reviews__item">
-                            <img src="img/reviews/01.png" alt="reviews photo" class="reviews__photo">
-                            <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
-                            <div class="reviews__author">Jon Doe</div>
+                        <div data-slider>
+                            <div>
+                                <div class="reviews__item">
+                                    <img src="img/reviews/01.png" alt="reviews photo" class="reviews__photo">
+                                    <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed
+                                        do
+                                        eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+                                    <div class="reviews__author">Jon Doe</div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="reviews__item">
+                                    <img src="img/reviews/02.png" alt="reviews photo" class="reviews__photo">
+                                    <div class="reviews__text">
+                                        “Amet, animi. Vero, eveniet autem molestiae cupiditate consectetur obcaecati?
+                                        Quis quasi nam eveniet fuga culpa eaque? Vel mollitia totam rerum saepe.”</div>
+                                    <div class="reviews__author">Nick Junker</div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -608,16 +625,33 @@
             <section class="section">
                 <div class="section__container">
                     <div class="reviews">
-                        <a class="reviews__btn reviews__btn_prev" href="#">Prev</a>
-                        <a class="reviews__btn reviews__btn_next" href="#">Next</a>
+                        <!-- <a class="reviews__btn reviews__btn_prev" href="#">Prev</a>
+                        <a class="reviews__btn reviews__btn_next" href="#">Next</a> -->
 
-                        <div class="reviews__item">
-                            <img src="img/reviews/01.png" alt="reviews photo" class="reviews__photo">
-                            <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
-                            <div class="reviews__author">Jon Doe</div>
+                        <div data-slider>
+                            <div>
+                                <div class="reviews__item">
+                                    <img src="img/reviews/01.png" alt="reviews photo" class="reviews__photo">
+                                    <div class="reviews__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed
+                                        do
+                                        eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</div>
+                                    <div class="reviews__author">Jon Doe</div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="reviews__item">
+                                    <img src="img/reviews/02.png" alt="reviews photo" class="reviews__photo">
+                                    <div class="reviews__text">
+                                        “Amet, animi. Vero, eveniet autem molestiae cupiditate consectetur obcaecati?
+                                        Quis quasi nam eveniet fuga culpa eaque? Vel mollitia totam rerum saepe.”</div>
+                                    <div class="reviews__author">Nick Junker</div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </section>
@@ -931,6 +965,9 @@
             </div>
         </footer>
     </div>
+
+
+
 
 
 </body>
